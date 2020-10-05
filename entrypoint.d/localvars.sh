@@ -70,6 +70,9 @@ then
   <X-PRE-PROCESS cmd="set" data="external_ssl_enable=$EXTERNAL_SSL_ENABLE"/>
   <X-PRE-PROCESS cmd="set" data="sip_tls_ciphers=$SIP_TLS_CIPHERS"/>
 
+  <!--verto defaults -->
+  <X-PRE-PROCESS cmd="set" data="verto_bindlocal_port=$VERTO_BINDLOCAL_PORT"/>
+
 </include>
 EOF
   touch /etc/freeswitch/localvars

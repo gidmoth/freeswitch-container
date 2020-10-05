@@ -68,7 +68,9 @@ ENV DEFAULT_PASSWORD='110fcee8-d278-4aac-a16e-898acb394493' \
     INTERNAL_SSL_ENABLE='true' \
     EXTERNAL_TLS_PORT='3381' \
     EXTERNAL_SSL_ENABLE='false' \
-    SIP_TLS_CIPHERS='ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH'
+    SIP_TLS_CIPHERS='ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH' \
+    VERTO_BINDLOCAL_PORT='8082'
+
 # Cryptdom means "Cryptodomain" -- may be different from domain, since
 # you may have wildcard-certs. See entrypoint.d/letsencrypt-cert-load.sh
 # for a usage example.

@@ -13,7 +13,7 @@
   <profiles>
     <profile name="default-v4">
       <!-- <param name="bind-local" value="$${local_ip_v4}:8081"/> -->
-      <param name="bind-local" value="$${local_ip_v4}:8082" secure="true"/>
+      <param name="bind-local" value="$${local_ip_v4}:$${verto_bindlocal_port}" secure="true"/>
       <param name="force-register-domain" value="$${domain}"/>
       <param name="secure-combined" value="$${certs_dir}/wss.pem"/>
       <param name="secure-chain" value="$${certs_dir}/wss.pem"/>

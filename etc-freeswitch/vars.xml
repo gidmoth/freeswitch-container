@@ -71,4 +71,7 @@
   <X-PRE-PROCESS cmd="set" data="outbound_caller_name=FreeSWITCH"/>
   <X-PRE-PROCESS cmd="set" data="outbound_caller_id=0000000000"/>
 
+  <!--verto defaults -->
+  <X-PRE-PROCESS cmd="set" data="verto_bindlocal_port=8082"/>
+
 </include>
