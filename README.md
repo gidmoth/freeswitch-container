@@ -58,10 +58,11 @@ Example start (you can replace `podman` with `docker`):
 
 ```
 podman run --name=freeswitch \
-  --env CRYPTDOM="example.com"
+  --env CRYPTDOM="example.com" \
   -v freeswitch_etc-freeswitch:/etc/freeswitch \
   -v certbot_etc-letsencrypt:/etc-letsencrypt \
   --network=host \
   --env DOMAIN_NAME="example.com" \
+  --env DOMAIN="example.com" \
   gidmoth/freeswitch:latest freeswitch
 ```
