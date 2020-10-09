@@ -6,6 +6,7 @@ then
   cp $certupstreampath/* /etc/freeswitch/tls/
   cd /etc/freeswitch/tls
   cat fullchain.pem privkey.pem > wss.pem 
+  cat fullchain.pem privkey.pem > tls.pem 
   cat cert.pem privkey.pem > agent.pem 
   cat chain.pem > cafile.pem
   cd /

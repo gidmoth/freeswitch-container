@@ -7,7 +7,7 @@ is to regenerate `vars.xml` at startup, depending on the existence of
 a file `localvars` in freeswitchs `/etc/freeswitch` directory.
 
 The Dockerfile contains an environment from which the Values are derived.
-This environment provides th defaults and looks like this:
+This environment provides the defaults and looks like this:
 
 ```
 ENV DEFAULT_PASSWORD='110fcee8-d278-4aac-a16e-898acb394493' \
@@ -31,12 +31,18 @@ ENV DEFAULT_PASSWORD='110fcee8-d278-4aac-a16e-898acb394493' \
 ```
 
 You can overwrite each of the Variables during start of an instance
-of this image.
+container of this image.
 
 If you use a persistent volume for `/etc/freeswitch` the `vars.xml`
-will only be rewritten if you delete the file `/etc/freeswitch/localvars`.
+will only be rewritten at the first start. Either with the defaults,
+or, depending on which environment you set, with other values (plus
+the defaults for unset values), and the file `/etc/freeswitch/localvars`
+will be created. As `localvars` now exists on the persistent volume,
+`vars.xml` won't be rewritten anymore, unless you delete `localvars`,
+and start a new instance of the image with the same Volume mountet
+at `/etc/freeswitch`.
 
-To see how this is implemented look at [localvars.sh](entrypoint.d/localvars.sh).
+To see how this is implemented look at [localvars.sh](https://github.com/gidmoth/freeswitch-container/blob/main/entrypoint.d/localvars.sh).
 
 ## Usage
 
@@ -50,9 +56,12 @@ One way to get the certs is letsencrypt, see [here](https://github.com/gidmoth/c
 for an example.
 
 Freeswitch needs the certs in a certain format, for the case of
-letsencrypt certs there is a script provided [here](entrypoint.d/letsencrypt-cert-load.sh).
+letsencrypt certs there is a script provided [here](https://github.com/gidmoth/freeswitch-container/blob/main/entrypoint.d/letsencrypt-cert-load.sh).
 This is just an example, and the script will not run if you don't provide
-the necessary environment or volume mount.
+the necessary environment or volume mount. Since certificates need renewal
+from time to time, the example uses the same "file exists?" logic as
+the vars mechanism, combined with a check for the right `CRYPTDOM`
+environment.
 
 Example start (you can replace `podman` with `docker`):
 
