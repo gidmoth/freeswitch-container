@@ -69,6 +69,7 @@ then
   <X-PRE-PROCESS cmd="set" data="external_tls_port=$EXTERNAL_TLS_PORT"/>
   <X-PRE-PROCESS cmd="set" data="external_ssl_enable=$EXTERNAL_SSL_ENABLE"/>
   <X-PRE-PROCESS cmd="set" data="sip_tls_ciphers=$SIP_TLS_CIPHERS"/>
+  <X-PRE-PROCESS cmd="set" data="internal_tls_only=$INTERNAL_TLS_ONLY"/>
 
   <!--verto defaults -->
   <X-PRE-PROCESS cmd="set" data="verto_bindlocal_port=$VERTO_BINDLOCAL_PORT"/>

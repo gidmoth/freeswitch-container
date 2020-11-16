@@ -8,9 +8,9 @@
     <param name="tls-sip-port" value="$${internal_tls_port}"/>
     <param name="tls-bind-params" value="transport=tls"/>
     <!-- Set to true to not bind on the normal sip-port but only on the TLS port -->
-    <param name="tls-only" value="true"/>
+    <param name="tls-only" value="$${internal_tls_only}"/>
     <!-- Verify the date on TLS certificates -->
-    <param name="tls-verify-date" value="true"/>
+    <param name="tls-verify-date" value="false"/>
     <!-- TLS verify policy, when registering/inviting gateways with other servers (outbound) or handling inbound registration/invite requests how should we verify their certificate -->
     <!-- set to 'in' to only verify incoming connections, 'out' to only verify outgoing connections, 'all' to verify all connections, also 'subjects_in', 'subjects_out' and 'subjects_all' for subject validation. Multiple policies can be split with a '|' pipe -->
     <param name="tls-verify-policy" value="none"/>
