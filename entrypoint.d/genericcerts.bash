@@ -1,11 +1,11 @@
+#!/bin/bash
+
 # Run me manualy to get certs for local testing
-  rm -rf /etc/freeswitch/tls/*
-  gentls_cert setup -cn $(hostname -i) -alt DNS:$(hostname -i) -org freeswitch.org
-  gentls_cert create_server -cn $(hostname -i) -alt DNS:$(hostname -i) -org freeswitch.org
-  cd /etc/freeswitch/tls
-  ln -s agent.pem tls.pem 
-  ln -s agent.pem agent.pem 
-  ln -s agent.pem wss.pem
-  ln -s agent.pem dtls-srtp.pem
-  touch /etc/freeswitch/workingcerts
-  chown -R freeswitch /etc/freeswitch/tls
+rm -rf /etc/freeswitch/tls
+mkdir /etc/freeswitch/tls
+openssl req -x509 -nodes -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+cat key.pem cert.pem > /etc/freeswitch/tls/wss.pem
+cat key.pem cert.pem > /etc/freeswitch/tls/tls.pem
+cat key.pem cert.pem > /etc/freeswitch/tls/dtls-srtp.pem
+cp cert.pem /etc/freeswitch/tls/cafile.pem
+chown -R freeswitch:freeswitch /etc/freeswitch/tls

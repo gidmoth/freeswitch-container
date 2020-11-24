@@ -74,6 +74,11 @@ then
   <!--verto defaults -->
   <X-PRE-PROCESS cmd="set" data="verto_bindlocal_port=$VERTO_BINDLOCAL_PORT"/>
 
+  <!-- esl defaults -->
+  <X-PRE-PROCESS cmd="set" data="es_listen_ip=$ES_LISTEN_IP"/>
+  <X-PRE-PROCESS cmd="set" data="es_listen_port=$ES_LISTEN_PORT"/>
+  <X-PRE-PROCESS cmd="set" data="es_pw=$ES_PW"/>
+
 </include>
 EOF
   touch /etc/freeswitch/localvars

@@ -16,7 +16,7 @@
     </extension>
 
     <extension name="video_uhb">
-      <condition field="destination_number" expression="^30000$">
+      <condition field="destination_number" expression="30000">
         <action application="answer"/>
         <action application="conference" data="video_uhb@v48"/>
       </condition>

@@ -12,7 +12,7 @@ then
   ln -s all.pem dtls-srtp.pem
   cd /
   touch /etc/freeswitch/workingcerts
-  chown -R freeswitch /etc/freeswitch/tls
+  chown -R freeswitch:freeswitch /etc/freeswitch/tls
   echo "UPDATED CERTS"
 else
   echo "CERTS NOT UPDATED"

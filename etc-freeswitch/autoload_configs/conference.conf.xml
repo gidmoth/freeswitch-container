@@ -40,7 +40,7 @@
       <param name="locked-sound" value="conference/conf-locked.wav"/>
       <param name="is-locked-sound" value="conference/conf-is-locked.wav"/>
       <param name="is-unlocked-sound" value="conference/conf-is-unlocked.wav"/>
-      <param name="conference-flags" value="livearray-json-status|json-events|rfc-4579|livearray-sync|minimize-video-encoding|manage-inbound-video-bitrate|video-required-for-canvas|video-mute-exit-canvas"/>
+      <param name="conference-flags" value="livearray-json-status|json-events|rfc-4579|livearray-sync|minimize-video-encoding|manage-inbound-video-bitrate|video-required-for-canvas|video-mute-exit-canvas|video-floor-only"/>
       <param name="video-mode" value="mux"/>
       <param name="video-canvas-size" value="1920x1080"/>
       <param name="video-codec-bandwidth" value="3mb"/>

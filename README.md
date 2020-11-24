@@ -10,7 +10,7 @@ The Dockerfile contains an environment from which the Values are derived.
 This environment provides the defaults and looks like this:
 
 ```
-ENV DEFAULT_PASSWORD='110fcee8-d278-4aac-a16e-898acb394493' \
+ENV DEFAULT_PASSWORD='napw' \
     SOUND_PREFIX='$${sounds_dir}/en/us/callie' \
     DOMAIN='$${local_ip_v4}' \
     DOMAIN_NAME='$${domain}' \
@@ -18,7 +18,7 @@ ENV DEFAULT_PASSWORD='110fcee8-d278-4aac-a16e-898acb394493' \
     OUTBOUND_CODEC_PREFS='OPUS,G722,PCMU,PCMA,H264,VP8' \
     EXTERNAL_RTP_IP='$${local_ip_v4}' \
     EXTERNAL_SIP_IP='$${local_ip_v4}' \
-    XML_RPC_PASSWORD='f8c8448b-0c87-4662-ae49-6a4153d87199' \
+    XML_RPC_PASSWORD='napw' \
     INTERNAL_SIP_PORT='5060' \
     EXTERNAL_SIP_PORT='5080' \
     SIP_TLS_VERSION='tlsv1,tlsv1.1,tlsv1.2' \
@@ -28,7 +28,10 @@ ENV DEFAULT_PASSWORD='110fcee8-d278-4aac-a16e-898acb394493' \
     EXTERNAL_SSL_ENABLE='false' \
     SIP_TLS_CIPHERS='ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH' \
     VERTO_BINDLOCAL_PORT='8082' \
-    INTERNAL_TLS_ONLY='false'
+    INTERNAL_TLS_ONLY='false' \
+    ES_LISTEN_IP='127.0.0.1' \
+    ES_LISTEN_PORT='8021' \
+    ES_PW='ClueCon'
 ```
 
 You can overwrite each of the Variables during start of an instance
