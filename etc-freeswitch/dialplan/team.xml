@@ -3,7 +3,7 @@
 
     <extension name="enable_srtp" continue="true">
       <condition>
-        <action application="set" data="sip_secure_media=true"/>
+        <action application="set" data="rtp_secure_media=mandatory"/>
       </condition>
     </extension>
 
@@ -15,10 +15,10 @@
       </condition>
     </extension>
 
-    <extension name="video_uhb">
+    <extension name="video_16kHz">
       <condition field="destination_number" expression="30000">
         <action application="answer"/>
-        <action application="conference" data="video_uhb@v48"/>
+        <action application="conference" data="video_16kHz@v16"/>
       </condition>
     </extension>
 
