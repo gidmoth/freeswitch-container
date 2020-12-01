@@ -1,0 +1,32 @@
+<include>
+  <context name="friends">
+
+    <extension name="enable_srtp" continue="true">
+      <condition field="destination_number" expression=".*">
+        <action application="set" data="rtp_secure_media=mandatory"/>
+      </condition>
+    </extension>
+
+    <extension name="friendusers_extension">
+      <condition field="destination_number" expression="^(21[0-9][0-9][0-9])$">
+        <action application="export" data="dialed_extension=$1"/>
+        <action application="set" data="hangup_after_bridge=true"/>
+        <action application="bridge" data="user/${dialed_extension}@${domain_name}"/>
+      </condition>
+    </extension>
+
+    <extension name="friends_conferences">
+      <condition field="destination_number" expression="^([31000-31999])$">
+        <action application="transfer" data="$1 XML team"/>
+      </condition>
+    </extension>
+
+    <extension name="public_conferences">
+      <condition field="destination_number" expression="^([32000-32999])$">
+        <action application="transfer" data="$1 XML team"/>
+      </condition>
+    </extension>
+
+
+  </context>
+</include>

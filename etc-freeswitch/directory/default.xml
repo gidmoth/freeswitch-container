@@ -16,6 +16,18 @@
         </users>
       </group>
 
+      <group name="friends">
+	      <users>
+	        <X-PRE-PROCESS cmd="include" data="friends/*.xml"/>
+        </users>
+      </group>
+
+      <group name="public">
+	      <users>
+	        <X-PRE-PROCESS cmd="include" data="public/*.xml"/>
+        </users>
+      </group>
+
     </groups>
 
   </domain>

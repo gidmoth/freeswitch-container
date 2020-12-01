@@ -20,7 +20,7 @@
   <profiles>
     <profile name="v16">
       <param name="domain" value="$${domain}"/>
-      <param name="rate" value="48000"/>
+      <param name="rate" value="16000"/>
       <param name="interval" value="20"/>
       <param name="energy-level" value="0"/>
       <param name="comfort-noise" value="true"/>

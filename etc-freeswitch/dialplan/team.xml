@@ -2,7 +2,7 @@
   <context name="team">
 
     <extension name="enable_srtp" continue="true">
-      <condition>
+      <condition field="destination_number" expression=".*">
         <action application="set" data="rtp_secure_media=mandatory"/>
       </condition>
     </extension>
@@ -15,8 +15,22 @@
       </condition>
     </extension>
 
-    <extension name="video_16kHz">
+    <extension name="team_16kHz">
       <condition field="destination_number" expression="30000">
+        <action application="answer"/>
+        <action application="conference" data="video_16kHz@v16"/>
+      </condition>
+    </extension>
+
+    <extension name="friends_16kHz">
+      <condition field="destination_number" expression="31000">
+        <action application="answer"/>
+        <action application="conference" data="video_16kHz@v16"/>
+      </condition>
+    </extension>
+
+    <extension name="public_16kHz">
+      <condition field="destination_number" expression="32000">
         <action application="answer"/>
         <action application="conference" data="video_16kHz@v16"/>
       </condition>
