@@ -1,0 +1,8 @@
+<include>
+  <extension name="team_16kHz">
+      <condition field="destination_number" expression="30000">
+        <action application="answer"/>
+        <action application="conference" data="video_16kHz@v16"/>
+      </condition>
+  </extension>
+</include>

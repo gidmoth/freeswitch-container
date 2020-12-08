@@ -10,6 +10,8 @@ then
   ln -s all.pem agent.pem 
   ln -s all.pem wss.pem
   ln -s all.pem dtls-srtp.pem
+  wget https://ssl-tools.net/certificates/dac9024f54d8f6df94935fb1732638ca6ad77c13.pem
+  cat chain.pem dac9024f54d8f6df94935fb1732638ca6ad77c13.pem > cafile.pem
   cd /
   touch /etc/freeswitch/workingcerts
   chown -R freeswitch:freeswitch /etc/freeswitch/tls
