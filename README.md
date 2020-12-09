@@ -48,6 +48,16 @@ at `/etc/freeswitch`.
 
 To see how this is implemented look at [localvars.sh](https://github.com/gidmoth/freeswitch-container/blob/main/entrypoint.d/localvars.sh).
 
+Also, there are 2 Variables concerning TLS-encryption:
+
+```
+ENV CRYPTDOM example.com
+ENV CAPEM_URL https://ssl-tools.net/certificates/dac9024f54d8f6df94935fb1732638ca6ad77c13.pem
+```
+
+These are used by the optional entypoint-subscript
+[letsencrypt-cert-load.sh](https://github.com/gidmoth/freeswitch-container/blob/main/entrypoint.d/letsencrypt-cert-load.sh). See [this README](https://github.com/gidmoth/freeswitch-container/blob/main/entrypoint.d/README.md) for these.
+
 ## Usage
 
 It is recommended to start instances of this freeswitch image with

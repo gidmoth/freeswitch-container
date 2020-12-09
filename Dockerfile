@@ -79,6 +79,7 @@ ENV DEFAULT_PASSWORD='napw' \
 # you may have wildcard-certs. See entrypoint.d/letsencrypt-cert-load.sh
 # for a usage example.
 ENV CRYPTDOM example.com
+ENV CAPEM_URL https://ssl-tools.net/certificates/dac9024f54d8f6df94935fb1732638ca6ad77c13.pem
 
 ## get the modes an permissions right
 RUN chmod +x /entrypoint.sh && chmod +x /entrypoint.d/genericcerts.bash
