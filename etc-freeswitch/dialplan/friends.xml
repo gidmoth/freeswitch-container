@@ -16,13 +16,13 @@
     </extension>
 
     <extension name="friends_conferences">
-      <condition field="destination_number" expression="^([31000-31999])$">
+      <condition field="destination_number" expression="^(31[0-9][0-9][0-9])$">
         <action application="transfer" data="$1 XML team"/>
       </condition>
     </extension>
 
     <extension name="public_conferences">
-      <condition field="destination_number" expression="^([32000-32999])$">
+      <condition field="destination_number" expression="^(32[0-9][0-9][0-9])$">
         <action application="transfer" data="$1 XML team"/>
       </condition>
     </extension>
