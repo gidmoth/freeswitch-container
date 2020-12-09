@@ -2,7 +2,7 @@
   <extension name="public_16kHz">
       <condition field="destination_number" expression="32000">
         <action application="answer"/>
-        <action application="conference" data="video_16kHz@v16"/>
+        <action application="conference" data="public_16kHz@v16"/>
       </condition>
   </extension>
 </include>
