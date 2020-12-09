@@ -79,6 +79,10 @@ then
   <X-PRE-PROCESS cmd="set" data="es_listen_port=$ES_LISTEN_PORT"/>
   <X-PRE-PROCESS cmd="set" data="es_pw=$ES_PW"/>
 
+  <!-- conference pins -->
+  <X-PRE-PROCESS cmd="set" data="defconpin=$DEFCONPIN"/>
+  <X-PRE-PROCESS cmd="set" data="modconpin=$MODCONPIN"/>
+
 </include>
 EOF
   touch /etc/freeswitch/localvars

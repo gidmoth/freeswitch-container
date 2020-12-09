@@ -73,7 +73,9 @@ ENV DEFAULT_PASSWORD='napw' \
     INTERNAL_TLS_ONLY='false' \
     ES_LISTEN_IP='127.0.0.1' \
     ES_LISTEN_PORT='8021' \
-    ES_PW='ClueCon'
+    ES_PW='ClueCon' \
+    DEFCONPIN='0815' \
+    MODCONPIN='2357'
 
 # Cryptdom means "Cryptodomain" -- may be different from domain, since
 # you may have wildcard-certs. See entrypoint.d/letsencrypt-cert-load.sh

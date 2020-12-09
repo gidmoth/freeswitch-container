@@ -31,7 +31,9 @@ ENV DEFAULT_PASSWORD='napw' \
     INTERNAL_TLS_ONLY='false' \
     ES_LISTEN_IP='127.0.0.1' \
     ES_LISTEN_PORT='8021' \
-    ES_PW='ClueCon'
+    ES_PW='ClueCon' \
+    DEFCONPIN='0815' \
+    MODCONPIN='2357'
 ```
 
 You can overwrite each of the Variables during start of an instance

@@ -2,7 +2,7 @@
   <extension name="friends_16kHz">
       <condition field="destination_number" expression="31000">
         <action application="answer"/>
-        <action application="conference" data="friends_16kHz@v16"/>
+        <action application="conference" data="friends_16kHz@v16+${conpin}+flags{${conf_flags}}"/>
       </condition>
   </extension>
 </include>
