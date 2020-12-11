@@ -8,4 +8,8 @@ cat key.pem cert.pem > /etc/freeswitch/tls/wss.pem
 cat key.pem cert.pem > /etc/freeswitch/tls/tls.pem
 cat key.pem cert.pem > /etc/freeswitch/tls/dtls-srtp.pem
 cp cert.pem /etc/freeswitch/tls/cafile.pem
+cp cert.pem /etc/freeswitch/tls/ca.pem
+cp key.pem /etc/freeswitch/tls/privkey.pem
+cp cert.pem /etc/freeswitch/tls/fullchain.pem
+cp cert.pem /etc/freeswitch/tls/chain.pem
 chown -R freeswitch:freeswitch /etc/freeswitch/tls
