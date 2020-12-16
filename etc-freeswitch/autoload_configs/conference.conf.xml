@@ -15,6 +15,20 @@
       <control action="vol listen dn" digits="4"/>
       <control action="hangup" digits="#"/>
     </group>
+    <group name="moderators">
+      <control action="mute" digits="0"/>
+      <control action="event muteall" digits="*"/>
+      <control action="energy up" digits="9"/>
+      <control action="energy equ" digits="8"/>
+      <control action="energy dn" digits="7"/>
+      <control action="vol talk up" digits="3"/>
+      <control action="vol talk zero" digits="2"/>
+      <control action="vol talk dn" digits="1"/>
+      <control action="vol listen up" digits="6"/>
+      <control action="vol listen zero" digits="5"/>
+      <control action="vol listen dn" digits="4"/>
+      <control action="hangup" digits="#"/>
+    </group>
   </caller-controls>
 
   <profiles>
@@ -31,19 +45,20 @@
       <param name="unmuted-sound" value="conference/conf-unmuted.wav"/>
       <param name="alone-sound" value="conference/conf-alone.wav"/>
       <param name="mute-detect-sound" value="conference/conf-muted.wav"/>
-      <param name="moh-sound" value="$${hold_music}"/>
-      <param name="enter-sound" value="tone_stream://%(200,0,500,600,700)"/>
-      <param name="exit-sound" value="tone_stream://%(500,0,300,200,100,50,25)"/>
+      <param name="moderator-controls" value="moderators"/>
+      <!-- <param name="moh-sound" value="$${hold_music}"/> -->
+      <!-- <param name="enter-sound" value="tone_stream://%(200,0,500,600,700)"/> -->
+      <!-- <param name="exit-sound" value="tone_stream://%(500,0,300,200,100,50,25)"/> -->
       <param name="kicked-sound" value="conference/conf-kicked.wav"/>
       <param name="locked-sound" value="conference/conf-locked.wav"/>
       <param name="is-locked-sound" value="conference/conf-is-locked.wav"/>
       <param name="is-unlocked-sound" value="conference/conf-is-unlocked.wav"/>
-      <param name="conference-flags" value="livearray-json-status|json-events|rfc-4579|livearray-sync|minimize-video-encoding|manage-inbound-video-bitrate|video-required-for-canvas|video-mute-exit-canvas"/>
+      <param name="conference-flags" value="livearray-json-status|json-events|livearray-sync|minimize-video-encoding"/>
       <param name="member-flags" value="mute-detect"/>
-      <param name="video-mode" value="mux"/>
-      <param name="video-canvas-size" value="1920x1080"/>
-      <param name="video-codec-bandwidth" value="3mb"/>
-      <param name="video-fps" value="30"/>
+      <param name="video-mode" value="passthrough"/>
+      <!-- <param name="video-canvas-size" value="1920x1080"/> -->
+      <param name="video-codec-bandwidth" value="auto"/>
+      <param name="video-fps" value="15"/>
     </profile>
     <profile name="v48">
       <param name="domain" value="$${domain}"/>
@@ -58,19 +73,20 @@
       <param name="unmuted-sound" value="conference/conf-unmuted.wav"/>
       <param name="alone-sound" value="conference/conf-alone.wav"/>
       <param name="mute-detect-sound" value="conference/conf-muted.wav"/>
-      <param name="moh-sound" value="$${hold_music}"/>
-      <param name="enter-sound" value="tone_stream://%(200,0,500,600,700)"/>
-      <param name="exit-sound" value="tone_stream://%(500,0,300,200,100,50,25)"/>
+      <param name="moderator-controls" value="moderators"/>
+      <!-- <param name="moh-sound" value="$${hold_music}"/> -->
+      <!-- <param name="enter-sound" value="tone_stream://%(200,0,500,600,700)"/> -->
+      <!-- <param name="exit-sound" value="tone_stream://%(500,0,300,200,100,50,25)"/> -->
       <param name="kicked-sound" value="conference/conf-kicked.wav"/>
       <param name="locked-sound" value="conference/conf-locked.wav"/>
       <param name="is-locked-sound" value="conference/conf-is-locked.wav"/>
       <param name="is-unlocked-sound" value="conference/conf-is-unlocked.wav"/>
-      <param name="conference-flags" value="livearray-json-status|json-events|rfc-4579|livearray-sync|minimize-video-encoding|manage-inbound-video-bitrate|video-required-for-canvas|video-mute-exit-canvas"/>
+      <param name="conference-flags" value="livearray-json-status|json-events|livearray-sync|minimize-video-encoding"/>
       <param name="member-flags" value="mute-detect"/>
-      <param name="video-mode" value="mux"/>
-      <param name="video-canvas-size" value="1920x1080"/>
-      <param name="video-codec-bandwidth" value="3mb"/>
-      <param name="video-fps" value="30"/>
+      <param name="video-mode" value="passthrough"/>
+      <!-- <param name="video-canvas-size" value="1920x1080"/> -->
+      <param name="video-codec-bandwidth" value="auto"/>
+      <param name="video-fps" value="15"/>
     </profile>
   </profiles>
 </configuration>

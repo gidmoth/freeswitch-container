@@ -25,8 +25,8 @@
       <param name="rtp-ip" value="$${local_ip_v4}"/>
       <param name="ext-rtp-ip" value="$${external_rtp_ip}"/>
       <param name="local-network" value="localnet.auto"/>
-      <param name="outbound-codec-string" value="pcmu,opus,h264,vp8"/>
-      <param name="inbound-codec-string" value="pcmu,opus,h264,vp8"/>
+      <param name="outbound-codec-string" value="$${global_codec_prefs}"/>
+      <param name="inbound-codec-string" value="$${global_codec_prefs}"/>
 
       <param name="apply-candidate-acl" value="localnet.auto"/>
       <param name="apply-candidate-acl" value="wan_v4.auto"/>
