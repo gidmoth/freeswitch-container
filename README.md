@@ -33,7 +33,8 @@ ENV DEFAULT_PASSWORD='napw' \
     ES_LISTEN_PORT='8021' \
     ES_PW='ClueCon' \
     DEFCONPIN='0815' \
-    MODCONPIN='2357'
+    MODCONPIN='2357' \
+    CAPEM_URL='https://letsencrypt.org/certs/trustid-x3-root.pem.txt'
 ```
 
 You can overwrite each of the Variables during start of an instance
