@@ -1,6 +1,8 @@
 <include>
   <extension name="team_16kHz">
       <condition field="destination_number" expression="30000">
+        <!-- force G722 codec for all conferees -->
+        <action application="set" data="codec_string=G722"/>
         <action application="answer"/>
         <action application="conference" data="team_16kHz@v16+${conpin}+flags{${conf_flags}}"/>
       </condition>
