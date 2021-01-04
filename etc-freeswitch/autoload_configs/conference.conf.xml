@@ -32,7 +32,7 @@
   </caller-controls>
 
   <profiles>
-    <profile name="v16">
+    <profile name="16kHz-novideo">
       <param name="domain" value="$${domain}"/>
       <param name="rate" value="16000"/>
       <param name="interval" value="20"/>
@@ -53,14 +53,10 @@
       <param name="locked-sound" value="conference/conf-locked.wav"/>
       <param name="is-locked-sound" value="conference/conf-is-locked.wav"/>
       <param name="is-unlocked-sound" value="conference/conf-is-unlocked.wav"/>
-      <param name="conference-flags" value="livearray-json-status|json-events|livearray-sync|minimize-video-encoding"/>
+      <param name="conference-flags" value="livearray-json-status|json-events|livearray-sync"/>
       <param name="member-flags" value="mute-detect"/>
-      <param name="video-mode" value="passthrough"/>
-      <!-- <param name="video-canvas-size" value="1920x1080"/> -->
-      <param name="video-codec-bandwidth" value="auto"/>
-      <param name="video-fps" value="15"/>
     </profile>
-    <profile name="v48">
+    <profile name="48kHz-video">
       <param name="domain" value="$${domain}"/>
       <param name="rate" value="48000"/>
       <param name="interval" value="20"/>

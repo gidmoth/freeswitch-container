@@ -19,6 +19,12 @@
       </condition>
     </extension>
 
+    <extension name="friendsusers">
+      <condition field="destination_number" expression="^(21[0-9][0-9][0-9])$">
+        <action application="transfer" data="$1 XML friends"/>
+      </condition>
+    </extension>
+
     <X-PRE-PROCESS cmd="include" data="conferences/*.xml"/>
 
   </context>
