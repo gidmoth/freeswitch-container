@@ -39,6 +39,7 @@
       <param name="energy-level" value="0"/>
       <param name="comfort-noise" value="true"/>
       <param name="pin-retries" value="3"/>
+      <param name="suppress-events" value="start-talking,stop-talking"/>
       <param name="pin-sound" value="conference/conf-pin.wav"/>
       <param name="bad-pin-sound" value="conference/conf-bad-pin.wav"/>
       <param name="muted-sound" value="conference/conf-muted.wav"/>
@@ -63,6 +64,7 @@
       <param name="energy-level" value="0"/>
       <param name="comfort-noise" value="true"/>
       <param name="pin-retries" value="3"/>
+      <param name="suppress-events" value="start-talking,stop-talking"/>
       <param name="pin-sound" value="conference/conf-pin.wav"/>
       <param name="bad-pin-sound" value="conference/conf-bad-pin.wav"/>
       <param name="muted-sound" value="conference/conf-muted.wav"/>
