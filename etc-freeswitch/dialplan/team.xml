@@ -15,7 +15,7 @@
         <!-- export a-legs proposed codecs to b-leg as acceptet codecs -->
         <!-- see profile for "inherit_codec=true", should avoid transcoding -->
         <!-- assume: there is a shared codec-->
-        <action application="export" data="codec_string='${ep_codec_string}'"/>
+        <!-- <action application="export" data="codec_string='${ep_codec_string}'"/> -->
         <action application="set" data="hangup_after_bridge=true"/>
         <action application="bridge" data="user/${dialed_extension}@${domain_name}"/>
       </condition>
