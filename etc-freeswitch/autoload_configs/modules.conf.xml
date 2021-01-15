@@ -6,7 +6,7 @@
     <!-- <load module="mod_logfile"/> -->
 
     <!-- XML Interfaces -->
-    <load module="mod_xml_rpc"/>
+    <!-- <load module="mod_xml_rpc"/> -->
 
     <!-- Event Handlers -->
     <!-- <load module="mod_cdr_csv"/> -->

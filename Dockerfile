@@ -32,9 +32,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     freeswitch-mod-xml-rpc \
     freeswitch-mod-verto \
     freeswitch-mod-rtc \
-    freeswitch-conf-minimal \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
-#    && rm -rf /etc/freeswitch \
+    && rm -rf /etc/freeswitch \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ## copy files/scripts
@@ -101,8 +100,8 @@ EXPOSE 16384-32768/udp
 # not sure if this is working flawless with podman or cri-o
 # SHELL is not supported for OCI format
 #SHELL       ["/bin/bash"]
-HEALTHCHECK --interval=15s --timeout=5s \
-    CMD  /usr/bin/fs_cli -x status | grep -q ^UP || exit 1
+#HEALTHCHECK --interval=15s --timeout=5s \
+#    CMD  /usr/bin/fs_cli -x status | grep -q ^UP || exit 1
 
 
 ENTRYPOINT ["/entrypoint.sh"]

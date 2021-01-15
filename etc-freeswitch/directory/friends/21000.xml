@@ -12,7 +12,7 @@
       <variable name="outbound_caller_id_number" value="$${outbound_caller_id}"/>
       <variable name="verto_dvar_email" value="frienduser1@example.com"/>
       <variable name="polymac" value="none"/>
-      <variable name="conf_flags" value="mute|mute-detect"/>
+      <variable name="conf_flags" value="mute-detect"/>
       <variable name="conpin" value="$${defconpin}"/>
     </variables>
   </user>
