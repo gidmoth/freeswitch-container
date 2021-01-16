@@ -17,7 +17,7 @@
     </group>
     <group name="moderators">
       <control action="mute" digits="0"/>
-      <control action="event muteall" digits="*"/>
+      <control action="event" digits="*" data="muteall"/>
       <control action="energy up" digits="9"/>
       <control action="energy equ" digits="8"/>
       <control action="energy dn" digits="7"/>
