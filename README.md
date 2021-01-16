@@ -34,7 +34,8 @@ ENV DEFAULT_PASSWORD='napw' \
     ES_PW='ClueCon' \
     DEFCONPIN='0815' \
     MODCONPIN='2357' \
-    CAPEM_URL='https://letsencrypt.org/certs/trustid-x3-root.pem.txt'
+    CAPEM_URL='https://letsencrypt.org/certs/trustid-x3-root.pem.txt' \
+    RECORDINGSDIR='/recordings'
 ```
 
 You can overwrite each of the Variables during start of an instance
@@ -55,7 +56,7 @@ Also, there are 2 Variables concerning TLS-encryption:
 
 ```
 ENV CRYPTDOM example.com
-ENV CAPEM_URL https://ssl-tools.net/certificates/dac9024f54d8f6df94935fb1732638ca6ad77c13.pem
+ENV CAPEM_URL https://letsencrypt.org/certs/trustid-x3-root.pem.txt
 ```
 
 These are used by the optional entypoint-subscript
@@ -86,6 +87,7 @@ Example start (you can replace `podman` with `docker`):
 podman run --name=freeswitch \
   --env CRYPTDOM="example.com" \
   -v freeswitch_etc-freeswitch:/etc/freeswitch \
+  -v freeswitch_recordings:/recordings \
   -v certbot_etc-letsencrypt:/etc-letsencrypt \
   --network=host \
   --env DOMAIN_NAME="example.com" \

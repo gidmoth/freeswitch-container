@@ -83,6 +83,9 @@ then
   <X-PRE-PROCESS cmd="set" data="defconpin=$DEFCONPIN"/>
   <X-PRE-PROCESS cmd="set" data="modconpin=$MODCONPIN"/>
 
+  <!-- recordings directory -->
+  <X-PRE-PROCESS cmd="set" data="recordings_dir=$RECORDINGSDIR"/>
+
 </include>
 EOF
   touch /etc/freeswitch/localvars
