@@ -1,5 +1,5 @@
 <include>
-  <extension name="friends_g722">
+  <extension name="friends_16kHz">
       <condition field="destination_number" expression="31000">
         <!-- force G722 codec for all conferees -->
         <action application="set" data="codec_string=G722"/>

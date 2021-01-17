@@ -1,5 +1,5 @@
 <include>
-  <extension name="team_g722">
+  <extension name="team_16kHz">
       <condition field="destination_number" expression="30000">
         <!-- force G722 codec for all conferees -->
         <action application="set" data="codec_string=G722"/>
