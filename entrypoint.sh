@@ -22,6 +22,8 @@ if [ "$1" = 'freeswitch' ]; then
     fi
     
     exec /usr/bin/freeswitch -nonat -c
+    # if don't want to run as rooot use the following line:
+    # exec /usr/sbin/gosu freeswitch /usr/bin/freeswitch -u freeswitch -g freeswitch -nonat -c
 fi
 
 exec "$@"

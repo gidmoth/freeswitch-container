@@ -47,6 +47,9 @@ COPY build/freeswitch.limits.conf /etc/security/limits.d/
 # copy custom config:
 COPY etc-freeswitch /etc/freeswitch/
 
+COPY custom-sounds/48kHz/* /usr/share/freeswitch/sounds/en/us/callie/conference/48000/
+COPY custom-sounds/16kHz/* /usr/share/freeswitch/sounds/en/us/callie/conference/16000/
+
 ## Environment
 ENV LANG en_US.utf8
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
