@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY entrypoint.sh /
 COPY entrypoint.d /entrypoint.d/
 # set ulimits
-COPY build/freeswitch.limits.conf /etc/security/limits.d/
+# COPY build/freeswitch.limits.conf /etc/security/limits.d/
 # This may work, if not, try to run with podman as a systemd.service
 # and the option:
 # `podman run --ulimit=host`
