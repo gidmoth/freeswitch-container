@@ -28,6 +28,9 @@
       <param name="outbound-codec-string" value="$${global_codec_prefs}"/>
       <param name="inbound-codec-string" value="$${global_codec_prefs}"/>
 
+      <!-- codec sec -->
+      <param name="inbound-late-negotiation" value="true"/>
+
       <param name="apply-candidate-acl" value="localnet.auto"/>
       <param name="apply-candidate-acl" value="wan_v4.auto"/>
       <param name="apply-candidate-acl" value="rfc1918.auto"/>
