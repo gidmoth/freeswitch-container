@@ -30,6 +30,7 @@
 
       <!-- codec sec -->
       <param name="inbound-late-negotiation" value="true"/>
+      <action application="set" data="inherit_codec=true"/>
 
       <param name="apply-candidate-acl" value="localnet.auto"/>
       <param name="apply-candidate-acl" value="wan_v4.auto"/>
