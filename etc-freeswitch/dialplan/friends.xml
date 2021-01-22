@@ -27,6 +27,12 @@
       </condition>
     </extension>
 
+    <extension name="publicusers">
+      <condition field="destination_number" expression="^(22[0-9][0-9][0-9])$">
+        <action application="transfer" data="$1 XML public"/>
+      </condition>
+    </extension>
+
     <extension name="friends_conferences">
       <condition field="destination_number" expression="^(31[0-9][0-9][0-9])$">
         <action application="transfer" data="$1 XML team"/>
