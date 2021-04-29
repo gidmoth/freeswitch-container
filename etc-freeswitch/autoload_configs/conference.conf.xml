@@ -20,11 +20,11 @@
       <control action="event" digits="*" data="muteall"/>
       <control action="energy up" digits="9"/>
       <control action="energy equ" digits="8"/>
-      <control action="energy dn" digits="7"/>
+      <control action="event" digits="7" data="conferenceunlock"/>
       <control action="event" digits="3" data="resumerecording"/>
       <control action="event" digits="2" data="pauserecording"/>
       <control action="event" digits="1" data="startrecording"/>
-      <control action="vol listen up" digits="6"/>
+      <control action="event" digits="6" data="conferencelock"/>
       <control action="event" digits="5" data="checkrecording"/>
       <control action="event" digits="4" data="stoprecording"/>
       <control action="hangup" digits="#"/>
