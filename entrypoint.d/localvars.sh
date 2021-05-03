@@ -86,6 +86,9 @@ then
   <!-- recordings directory -->
   <X-PRE-PROCESS cmd="set" data="recordings_dir=$RECORDINGSDIR"/>
 
+  <!-- wss binding for sofia -->
+  <X-PRE-PROCESS cmd="set" data="wss_binding=$WSS_BINDING"/>
+
 </include>
 EOF
   touch /etc/freeswitch/localvars

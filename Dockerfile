@@ -79,7 +79,8 @@ ENV DEFAULT_PASSWORD='napw' \
     DEFCONPIN='0815' \
     MODCONPIN='2357' \
     CAPEM_URL='https://letsencrypt.org/certs/trustid-x3-root.pem.txt' \
-    RECORDINGSDIR='/recordings'
+    RECORDINGSDIR='/recordings' \
+    WSS_BINDING=':7443'
 
 # Cryptdom means "Cryptodomain" -- may be different from domain, since
 # you may have wildcard-certs. See entrypoint.d/letsencrypt-cert-load.sh
