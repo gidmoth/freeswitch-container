@@ -42,12 +42,12 @@
     <action application="set" data="inherit_codec=true"/>
 
     <!-- bind to websocket port -->
+    <param name="ext-rtp-ip" value="$${external_rtp_ip}"/>
+    <param name="ext-sip-ip" value="$${external_sip_ip}"/>
     <param name="wss-binding" value="$${wss_binding}"/>
 
     <param name="rtp-ip" value="$${local_ip_v4}"/>
     <param name="sip-ip" value="$${local_ip_v4}"/>
-    <param name="ext-rtp-ip" value="auto-nat"/>
-    <param name="ext-sip-ip" value="auto-nat"/>
     <param name="sip-port" value="$${internal_sip_port}"/>
   </settings>
 </profile>
