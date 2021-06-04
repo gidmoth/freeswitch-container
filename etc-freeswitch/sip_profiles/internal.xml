@@ -49,5 +49,7 @@
     <param name="rtp-ip" value="$${local_ip_v4}"/>
     <param name="sip-ip" value="$${local_ip_v4}"/>
     <param name="sip-port" value="$${internal_sip_port}"/>
+    <!-- listen to outband dtmf -->
+    <param name="liberal-dtmf" value="true"/>
   </settings>
 </profile>
