@@ -3,9 +3,9 @@
 
     <extension name="enable_srtp" continue="true">
       <condition field="destination_number" expression=".*">
-        <action application="set" data="rtp_secure_media=mandatory"/>
+        <action application="set" data="rtp_secure_media=optional"/>
         <!-- export to b-leg! -->
-        <action application="export" data="rtp_secure_media=mandatory"/>
+        <action application="export" data="rtp_secure_media=optional"/>
       </condition>
     </extension>
 
