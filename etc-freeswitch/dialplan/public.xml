@@ -17,7 +17,8 @@
         <!-- assume: there is a shared codec-->
         <!-- <action application="export" data="codec_string='${ep_codec_string}'"/> -->
         <action application="set" data="hangup_after_bridge=true"/>
-        <action application="set" data="bypass_media=true"/>
+        <!-- ucs 4.0.15  doesn't support stun, so no bypassing :-( -->
+        <!-- <action application="set" data="bypass_media=true"/> -->
         <action application="bridge" data="user/${dialed_extension}@${domain_name}"/>
       </condition>
     </extension>
