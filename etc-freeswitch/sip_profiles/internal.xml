@@ -53,5 +53,7 @@
     <param name="liberal-dtmf" value="true"/>
     <!-- track multiple registrations by contact field, init contact for dialplan -->
     <param name="multiple-registrations" value="contact"/>
+    <!-- flush/delete regs by call-id -->
+    <param name="inbound-use-callid-as-uuid" value="true"/>
   </settings>
 </profile>
