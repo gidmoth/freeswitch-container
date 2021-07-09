@@ -19,7 +19,10 @@
         <action application="set" data="hangup_after_bridge=true"/>
         <!-- ucs 4.0.15  doesn't support stun, so no bypassing :-( -->
         <!-- <action application="set" data="bypass_media=true"/> -->
-        <action application="bridge" data="user/${dialed_extension}@${domain_name}"/>
+        <!-- old bridge, no calling all registered endpoints -->
+        <!-- <action application="bridge" data="user/${dialed_extension}@${domain_name}"/> -->
+        <!-- new bridge, use contact function, call all endpoints registered -->
+        <action application="bridge" data="${sofia_contact(${dialed_extension})}"/>
       </condition>
     </extension>
 

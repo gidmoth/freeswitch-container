@@ -15,7 +15,7 @@
     <!-- Endpoints -->
     <load module="mod_sofia"/>
     <load module="mod_loopback"/>
-    <load module="mod_verto"/>
+    <!-- <load module="mod_verto"/> -->
     <load module="mod_rtc"/>
 
     <!-- Applications -->
