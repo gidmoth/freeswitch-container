@@ -55,6 +55,6 @@
     <!-- doesn't work unfortunately! -->
     <param name="multiple-registrations" value="true"/>
     <!-- flush/delete regs by call-id -->
-    <param name="inbound-use-callid-as-uuid" value="true"/>
+    <!-- <param name="inbound-use-callid-as-uuid" value="true"/> -->
   </settings>
 </profile>

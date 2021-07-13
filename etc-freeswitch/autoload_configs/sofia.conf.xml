@@ -2,6 +2,7 @@
   <global_settings>
     <param name="log-level" value="9"/>
     <param name="tracelevel" value="DEBUG"/>
+    <!-- <param name="multiple-registrations" value="true"/> -->
   </global_settings>
 
   <profiles>
